@@ -69,9 +69,9 @@ function addname() {
       <button class="text-red-500 cursor-pointer" onclick="deleteTodo(this)">O'chirish</button>
     `;
     todoList.appendChild(li);
-    todoInput.value = "";
-    todoInput.classList.remove("lime");
-    todoInput.focus();
+    nameInput.value = "";
+    nameInput.classList.remove("lime");
+    nameInput.focus();
   }
 }
 
