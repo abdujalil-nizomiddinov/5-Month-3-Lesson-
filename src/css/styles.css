@@ -1,0 +1,49 @@
+#todoInput,
+#nameInput {
+  transition: 250ms;
+}
+#todoInput:focus,
+#nameInput:focus {
+  border-color: red;
+}
+
+#todoInput.lime:focus,
+#nameInput.lime:focus {
+  border-color: lime;
+}
+
+#todoInput:not(.lime):focus,
+#nameInput:not(.lime):focus {
+  border-color: red;
+}
+#errorMessage {
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 100px;
+  position: absolute;
+  margin: auto;
+  right: 20px;
+  top: 20px;
+  background: red;
+}
+#errorMessage p {
+  position: absolute;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+#errorMessage i {
+  top: 6px;
+  left: 6px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid black;
+  position: absolute;
+  font-size: 18px;
+  padding: 3px 6px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+}
