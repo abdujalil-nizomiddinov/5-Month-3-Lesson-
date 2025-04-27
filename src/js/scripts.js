@@ -29,10 +29,6 @@ addnameBtn.addEventListener("click", function () {
 addTodoBtn.addEventListener("click", function () {
   addTodo();
 });
-errorMessage_btn.addEventListener("click", function () {
-  errorMessage.classList.remove("flex");
-  errorMessage.classList.add("hidden");
-});
 
 nameInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
@@ -115,13 +111,18 @@ function showErrorMessage() {
     errorMessage.classList.remove("opacity-0");
   }, 100);
   errorMessage.classList.add("flex");
-  setTimeout(() => {
+  const end = setTimeout(() => {
     errorMessage.classList.add("opacity-0");
     setTimeout(() => {
       errorMessage.classList.remove("flex");
       errorMessage.classList.add("hidden");
     }, 200);
   }, 3000);
+  errorMessage_btn.addEventListener("click", function () {
+    errorMessage.classList.remove("flex");
+    errorMessage.classList.add("hidden");
+    clearInterval(end);
+  });
 }
 const btn_1 = document.querySelector("#btn_1");
 const btn_2 = document.querySelector("#btn_2");
